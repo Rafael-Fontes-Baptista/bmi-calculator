@@ -1,0 +1,122 @@
+<%- include('partials/header') -%>
+
+<div class="header">
+  <h1>BMI Calcutator</h1>
+</div>
+<div class="sub-title">
+  <p>How are you doing with your health?</p>
+</div>
+
+<div>
+  <p class="bmi-description">
+    <strong>Body Mass Index (BMI)</strong> is a person's weight in kilograms
+    divided by the square of height in meters. A high <strong>BMI</strong> can
+    be an indicator of high body fatness. <strong>BMI</strong> can be used to
+    screen for weight categories that may lead to health problems but it is not
+    diagnostic of the body fatness or health of an individual.<br />
+    <a
+      href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html#:~:text=Body%20Mass%20Index%20(BMI)%20is,or%20health%20of%20an%20individual."
+      target="_blank"
+      >(Source: Centers for Disease Control and Prevention)</a
+    >
+  </p>
+</div>
+
+<div class="bmi-form">
+  <h2>Let's check your BMI:</h2>
+  <form action="/#result" method="POST">
+    <div class="input-form">
+      <select class="input-data" name="gender" required>
+        <option selected disabled>-- gender --</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+      </select>
+      <select class="input-data" name="exercise" required>
+        <option selected disabled>-- exercise --</option>
+        <option value="none">none</option>
+        <option value="moderate">moderated</option>
+        <option value="daily">daily</option>
+      </select>
+      <input
+        class="input-data"
+        name="age"
+        type="number"
+        placeholder="age (years)"
+        autocomplete="off"
+        required
+      />
+      <input
+        class="input-data"
+        name="weight"
+        type="number"
+        placeholder="weight (kg)"
+        autocomplete="off"
+        required
+      />
+      <input
+        class="input-data"
+        name="height"
+        type="number"
+        placeholder="height (cm)"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div class="btn-form">
+      <button class="btn-submit" type="submit">Calculate BMI</button>
+    </div>
+  </form>
+
+  <div class="img-bmi-scale">
+    <img
+      class="img-bmi"
+      src="https://nutrition.health.gov.lk/wp-content/themes/wp-bootstrap-4-idealsot/assets/img/BMI.png"
+      alt="BMI scale"
+    />
+  </div>
+</div>
+
+<div class="results" id="result">
+  <p class="bmi-results">
+    Your BMI is <strong><%= BMI %></strong>, indicating your weight is in the
+    <strong><%= categoryBMI %></strong> category for adults of your height.
+  </p>
+</div>
+
+<div class="suggestions">
+  <h3>Suggestions for a healthier life:</h3>
+  <ol>
+    <li>
+      Your current weight is <strong><%= weightInKg %> Kg</strong>, but your
+      ideal weight according<br />
+      to the BMI indications is <strong><%= idealWeight %> Kg</strong>. For
+      reach this goal, you need to <%= loseOrGainTxt %>
+      <strong><%= weightToLose %> Kg</strong>;
+    </li>
+    <br />
+    <li>
+      With a normal lifestyle you burn
+      <strong><%= dailyCalories %> calories</strong> a day, but you should<br />
+      <%= increaseOrDecreaseTxt %> to
+      <strong><%= dietCalories %> calories</strong> a day to achieve your ideal
+      weight;
+    </li>
+    <br />
+    <li>
+      You need to control your diet during the next
+      <strong><%= weeksOnDiet %> weeks</strong>.
+    </li>
+  </ol>
+</div>
+
+<div id="contact" class="contactSection">
+  <div class="text-center">
+    <p class="subHeading">Like the BMI app?</p>
+    <h2>I'd love to hear from you!</h2>
+    <a href="mailTo:rafaelfontesb@gmail.com" class="contactButton"
+      >GET IN TOUCH!</a
+    >
+  </div>
+</div>
+
+<%- include('partials/footer') -%>

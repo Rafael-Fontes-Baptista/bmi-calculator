@@ -1,0 +1,168 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #393e46;
+  color: #eeeeee;
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffd369;
+  color: black;
+  text-align: center;
+  height: 50px;
+}
+
+.sub-title p {
+  margin: 0;
+}
+
+.bmi-description {
+  padding: 3% 25% 0;
+  text-align: justify;
+}
+
+.bmi-form {
+  padding: 3% 5% 0;
+}
+
+.bmi-form h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .input-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.input-data {
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #393e46;
+}
+
+.input-data:focus {
+  border: 2px solid #ffd369;
+  font-size: 1.1rem;
+}
+
+.btn-form {
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: #eeeeee;
+  border: 2px solid #393e46;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 200px;
+  padding: 15px;
+}
+
+.btn-submit:hover {
+  background-color: #ffd369;
+  color: #393e46;
+}
+
+.results {
+  text-align: center;
+}
+
+.bmi-results {
+  padding: 0 30%;
+}
+
+.img-bmi-scale {
+  display: flex;
+  justify-content: center;
+}
+
+.img-bmi {
+  width: 75%;
+  margin-top: 20px;
+}
+
+.results {
+  padding-top: 50px;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 5%;
+  margin-top: 100px;
+  background-color: #eeeeee;
+}
+
+.contactSection {
+  padding: 50px 0;
+  background-color: #ffd369;
+  color: black;
+  text-align: center;
+}
+
+.contactButton {
+  color: black;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.contactButton:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+.flex-container {
+  display: flex;
+  padding: 30px 0 0 0;
+  justify-content: center;
+  background-color: #393e46;
+}
+
+.footer_icons a {
+  color: #fff;
+  padding: 0 5px;
+}
+
+.footer_icons a:hover {
+  color: #ffd369;
+}
+
+.footer_text {
+  font-size: 13px;
+  background-color: #393e46;
+  color: #eeeeee;
+  padding: 20px 0;
+  text-align: center;
+}
