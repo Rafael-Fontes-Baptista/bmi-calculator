@@ -39,14 +39,14 @@ app.post('/', function (req, res) {
 
   if (BMI < 18.5) {
     categoryBMI = 'Underweight'
-  } else if (BMI < 23) {
-    categoryBMI = 'Normal'
   } else if (BMI < 25) {
-    categoryBMI = 'Risk to Overweight'
+    categoryBMI = 'Normal'
   } else if (BMI < 30) {
     categoryBMI = 'Overweight'
-  } else {
+  } else if (BMI < 35) {
     categoryBMI = 'Obese'
+  } else {
+    categoryBMI = 'Extremely Obese'
   }
 
   //Logic calculations
